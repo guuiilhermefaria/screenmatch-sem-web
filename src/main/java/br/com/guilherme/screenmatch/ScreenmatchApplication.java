@@ -1,8 +1,6 @@
 package br.com.guilherme.screenmatch;
 
-import br.com.guilherme.screenmatch.model.DadosSerie;
-import br.com.guilherme.screenmatch.service.ConsumoApi;
-import br.com.guilherme.screenmatch.service.ConverteDados;
+import br.com.guilherme.screenmatch.principal.Principal;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -10,19 +8,15 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class ScreenmatchApplication implements CommandLineRunner {
 
-	public static void main(String[] args) {
-		SpringApplication.run(ScreenmatchApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(ScreenmatchApplication.class, args);
+    }
 
-	@Override
-	public void run(String... args) throws Exception {
-		var consumoApi = new ConsumoApi();
-		var json = consumoApi.obterDados("https://www.omdbapi.com/?t=gilmore+girls&apikey=63b20b52");
-//		System.out.println(json);
-//		json = consumoApi.obterDados("https://coffee.alexflipnote.dev/random.json");
-		System.out.println(json);
-		ConverteDados conversor = new ConverteDados();
-		DadosSerie dados = conversor.obterDados(json, DadosSerie.class);
-		System.out.println(dados);
-	}
+    @Override
+    public void run(String... args) throws Exception {
+        Principal principal = new Principal();
+        principal.exibeMenu();
+
+
+    }
 }
