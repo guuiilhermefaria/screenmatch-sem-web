@@ -6,7 +6,6 @@ import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
 
 public class Episodio {
-    @JsonAlias("Title")
     private Integer temporada;
     private String titulo;
     private Integer numeroEpisodio;
