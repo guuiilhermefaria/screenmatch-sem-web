@@ -7,8 +7,6 @@ import br.com.guilherme.screenmatch.model.Episodio;
 import br.com.guilherme.screenmatch.service.ConsumoApi;
 import br.com.guilherme.screenmatch.service.ConverteDados;
 
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -103,10 +101,10 @@ public class Principal {
 
         System.out.println(avaliacoesPorTemporada);
 
-        DoubleSummaryStatistics est = episodios.stream()
-                .filter(e -> e.getAvaliacao() > 0.0)
-                .mapToDouble(Episodio::getAvaliacao)
-                .summaryStatistics();
+//        DoubleSummaryStatistics est = episodios.stream()
+//                .filter(e -> e.getAvaliacao() > 0.0)
+//                .mapToDouble(Episodio::getAvaliacao)
+//                .summaryStatistics();
 
         DoubleSummaryStatistics est = episodios.stream()
                 .filter(e -> e.getAvaliacao() > 0.0)
