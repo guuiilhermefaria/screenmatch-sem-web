@@ -3,7 +3,6 @@ package br.com.guilherme.screenmatch.service;
 import br.com.guilherme.screenmatch.dto.EpisodioDTO;
 import br.com.guilherme.screenmatch.dto.SerieDTO;
 import br.com.guilherme.screenmatch.model.Categoria;
-import br.com.guilherme.screenmatch.model.DadosSerie;
 import br.com.guilherme.screenmatch.model.Episodio;
 import br.com.guilherme.screenmatch.model.Serie;
 import br.com.guilherme.screenmatch.repository.SerieRepository;

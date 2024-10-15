@@ -7,6 +7,9 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * Class responsible to initiate the Principal menu to register the the series and episodes in database.
+ */
 //@SpringBootApplication
 //public class ScreenmatchApplicationSemWeb implements CommandLineRunner {
 //    @Autowired

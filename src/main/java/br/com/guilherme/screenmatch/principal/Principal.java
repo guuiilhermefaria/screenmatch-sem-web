@@ -8,6 +8,9 @@ import br.com.guilherme.screenmatch.service.ConverteDados;
 import java.util.*;
 import java.util.stream.Collectors;
 
+/**
+ * Class responsible to register the main menu via Command Line Interface.
+ */
 public class Principal {
 
     private Scanner leitura = new Scanner(System.in);
@@ -97,7 +100,6 @@ public class Principal {
 
     private void buscarSerieWeb() {
         DadosSerie dados = getDadosSerie();
-//        dadosSeries.add(dados);
         Serie serie = new Serie(dados);
         repository.save(serie);
         System.out.println(dados);
@@ -107,8 +109,7 @@ public class Principal {
         System.out.println("Digite o nome da série para busca");
         var nomeSerie = leitura.nextLine();
         var json = consumo.obterDados(ENDERECO + nomeSerie.replace(" ", "+") + API_KEY);
-        DadosSerie dados = conversor.obterDados(json, DadosSerie.class);
-        return dados;
+        return conversor.obterDados(json, DadosSerie.class);
     }
 
     private void buscarEpisodioPorSerie() {
